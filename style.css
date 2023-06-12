@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('https://img.freepik.com/premium-vector/wild-animal-childish-illustration-snake-with-herbs-grass-vector-design-seamless-pattern_153823-676.jpg');
+}
+
+canvas{
+    box-shadow: 20px 10px 50px black;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    background-color: rgb(211, 147, 27);
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+button:hover{
+    background: rgb(255, 166, 0);
+}
