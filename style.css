@@ -27,3 +27,18 @@ button{
 button:hover{
     background: rgb(255, 166, 0);
 }
+
+.controlls button{
+    width: 85px;
+}
+
+.controlls{
+    display: none;
+}
+
+@media (max-width:991px) {
+    .controlls{
+        display: flex;
+        gap: 3px;
+    }
+}
