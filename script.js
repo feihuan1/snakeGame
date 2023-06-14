@@ -1,5 +1,7 @@
 const canvas = document.querySelector("#game");
 const ctx = canvas.getContext("2d");
+const controlls = document.querySelectorAll('div button')
+console.log(controlls)
 
 class SnakePart {
   constructor(x, y) {
@@ -166,30 +168,49 @@ function checkAppleCollision() {
 
 document.body.addEventListener("keydown", keyDown);
 
+function goUp(){
+  inputsYVelocity = -1;
+      inputsXVelocity = 0;
+}
+function goDown(){
+  inputsYVelocity = 1;
+      inputsXVelocity = 0;
+}
+function goLeft(){
+  inputsYVelocity = 0;
+      inputsXVelocity = -1;
+}
+function goRight(){
+  inputsYVelocity = 0;
+      inputsXVelocity = 1;
+}
+
 function keyDown(event) {
   switch (event.key) {
     case "ArrowUp": {
-      inputsYVelocity = -1;
-      inputsXVelocity = 0;
+      goUp()
       break;
     }
     case "ArrowDown": {
-      inputsYVelocity = 1;
-      inputsXVelocity = 0;
+      goDown()
       break;
     }
     case "ArrowLeft": {
-      inputsYVelocity = 0;
-      inputsXVelocity = -1;
+      goLeft()
       break;
     }
     case "ArrowRight": {
-      inputsYVelocity = 0;
-      inputsXVelocity = 1;
+      goRight()
       break;
     }
   }
 }
+
+
+controlls[0].addEventListener('click',goLeft)
+controlls[1].addEventListener('click',goUp)
+controlls[2].addEventListener('click',goDown)
+controlls[3].addEventListener('click',goRight)
 
 function playSound(src, loud = 1) {
   let sound = new Audio(src);
